@@ -44,7 +44,7 @@ class HomePageState extends State<HomePage> {
             Expanded(
               child: GoogleSheetsApi.loading
                   ? const MyLoadingCircle()
-                  : ExpenseList(),
+                  : expenseList(),
             ),
             PlusButton(onPress: _newTrasAction),
           ],
@@ -207,7 +207,7 @@ class HomePageState extends State<HomePage> {
     });
   }
 
-  Container ExpenseList() {
+  Container expenseList() {
     return Container(
       child: Center(
         child: Column(children: [
